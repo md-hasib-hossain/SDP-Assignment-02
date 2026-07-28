@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Craft | SDP Assignment 02</title>
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-badge">
+        <i class="fa-solid fa-award"></i> Assignment 02
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero & Search Section (Question 2) -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Discover & Mix Your Favorite Cocktails</h1>
+      <p>Search from hundreds of recipe combinations or explore default choices.</p>
+
+      <!-- Search Input Box -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search drinks by name ...">
+        <button id="search-btn" onclick="handleSearch()">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2 Columns Main Layout (Question 4) -->
+  <main class="main-layout">
+    
+    <!-- Left Column: Drink Display Grid -->
+    <section class="left-column">
+      <div class="section-title">
+        <h2 id="collection-title">Default Drinks</h2>
+      </div>
+
+      <!-- Drink Cards Grid Container -->
+      <div id="drink-container" class="drink-grid">
+        <!-- Skeleton Loaders -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </section>
+
+    <!-- Right Column: Add to Group Sidebar (Question 4 & 5) -->
+    <section class="right-column">
+      <div class="sidebar-card">
+        <div class="sidebar-header">
+          <h3><i class="fa-solid fa-layer-group"></i> Group Selection</h3>
+          <span class="count-badge"><span id="group-count">0</span> / 7</span>
+        </div>
+
+        <p class="sidebar-subtitle">Selected drinks for your group:</p>
+
+        <!-- Dynamic Selected List (Question 5) -->
+        <ul id="group-list" class="group-item-list">
+          <li class="empty-msg">No drinks added yet. Click "Add to group" on any card!</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Component for Details (Question 7) -->
+  <div id="details-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      <div id="modal-content-body">
+        <!-- Details injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 SDP Assignment 02</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
